@@ -1,0 +1,435 @@
+#loading {
+  margin: 20rem 45rem;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+#loading::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: #ff3d00;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#form-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  margin: 5rem;
+}
+
+#login-form,
+#register-form {
+  grid-template-rows: repeat(4, 1fr);
+  margin: 5rem;
+  width: 30rem;
+  text-align: center;
+}
+
+#login-form > *,
+#register-form > * {
+  margin: 0.4rem;
+}
+
+#login-email,
+#login-password,
+#register-email,
+#register-password {
+  height: 1.7rem;
+  width: 25rem;
+}
+
+#login-button,
+#register-button {
+  height: 2.2rem;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  width: 25.5rem;
+}
+
+#login-button:hover,
+#register-button:hover {
+  color: #000;
+  background: #fff;
+  border: 1px solid #000;
+}
+
+#login-button:disabled,
+#register-button:disabled {
+  border: none;
+  background: #999;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.registerLabel,
+.loginLabel {
+  font-size: 1.3rem;
+  width: 25rem;
+}
+
+#login-error,
+#register-error {
+  color: #f00;
+  text-align: center;
+  height: 1.7rem;
+  padding-top: 0.5rem;
+  margin: 1rem 0;
+}
+
+#profile {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+}
+
+.profileButton {
+  display: flex;
+  flex-direction: row;
+}
+
+.updateProfile {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+}
+
+.displayName,
+.photo {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem;
+}
+
+#user-profile {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin-top: 0.8rem;
+}
+
+.photoURL {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+#profile-display-name-input,
+#profile-photo-url {
+  margin-top: 0.2rem;
+  height: 1.7rem;
+  font-size: 0.9rem;
+  width: 12.5rem;
+  text-indent: 1px;
+}
+
+#email-verified-button {
+  cursor: pointer;
+  outline: none;
+  margin: 0.5rem;
+  width: 7rem;
+  border-radius: 0.2rem;
+  border: 1px solid #1e97e5;
+  background: #1e97e5;
+  color: #fff;
+  height: 1.7rem;
+}
+
+#email-verified-button:hover {
+  color: #1e97e5;
+  background: #fff;
+}
+
+#logout-button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.2rem;
+  border: 1px solid #f00;
+  width: 4rem;
+  margin: 0.5rem;
+  height: 1.7rem;
+  background: #f00;
+  color: #fff;
+}
+
+#logout-button:hover {
+  background: #fff;
+  color: #f00;
+}
+
+.authButtons {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  width: 2rem;
+  margin-top: 17rem;
+}
+
+#google-auth-button,
+#microsoft-auth-button {
+  margin: 0.2rem;
+  background: #e1e1e1;
+  outline: none;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+#profile-update-button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.2rem;
+  margin: 0.2rem;
+  border: 1px solid #0f0;
+  background: #0f0;
+  color: #fff;
+  height: 2rem;
+  margin-top: 0.5rem;
+}
+
+#profile-update-button:hover {
+  color: #0f0;
+  background: #fff;
+}
+
+#profile-update-button:disabled {
+  background: #999;
+  color: #fff;
+  opacity: 0.3;
+}
+
+#todo {
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.toDoListHeader {
+  text-align: center;
+}
+
+.todoInputArea {
+  text-align: center;
+}
+
+#todo-email-verified-error {
+  color: #f00;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+#todo-input {
+  width: 20rem;
+  height: 1.7rem;
+}
+
+#add-todo-button {
+  cursor: pointer;
+  height: 2.1rem;
+  border-radius: 0.2rem;
+  outline: none;
+  border: 1px solid #1e97e5;
+  background: #1e97e5;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+#add-todo-button:hover {
+  background: #fff;
+  color: #1e97e5;
+}
+
+#add-todo-button:disabled {
+  background: #999;
+  color: #fff;
+  opacity: 0.3;
+}
+
+#todo-list {
+  width: 20rem;
+  list-style-type: none;
+}
+
+.todoItem {
+  height: 1.7rem;
+  font-size: 1.2rem;
+  margin-right: -0.4rem;
+  margin-left: -2.4rem;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.todoItem > span {
+  width: 13rem;
+  height: 2rem;
+  margin-top: 0.3rem;
+}
+
+.saveButton,
+.editButton {
+  height: 1.7rem;
+  width: 3.5rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  outline: none;
+  border: 1px solid #1e97e5;
+  background: #1e97e5;
+  color: #fff;
+}
+
+.deleteButton,
+.cancelButton {
+  height: 1.7rem;
+  width: 3.5rem;
+  margin: 0 -0.2rem 0 0.2rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  outline: none;
+  border: 1px solid #f00;
+  background: #f00;
+  color: #fff;
+}
+
+.editButton:hover,
+.saveButton:hover {
+  background: #fff;
+  color: #1e97e5;
+}
+
+.deleteButton:hover,
+.cancelButton:hover {
+  background: #fff;
+  color: #f00;
+}
+
+.editInput {
+  font-size: 1.1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: #1e97e5;
+  text-decoration-thickness: 0.13rem;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.update-profile-modal {
+  position: relative;
+  background: #fefefe;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #888;
+  width: 13rem;
+  height: 14rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modalHeader {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin-bottom: 1.5rem;
+}
+
+.updateProfileText {
+  font-size: 1.5rem;
+  text-indent: 0.2rem;
+}
+
+#open-modal-button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.2rem;
+  border: 1px solid #0f0;
+  width: 7rem;
+  margin: 0.5rem;
+  height: 1.7rem;
+  background: #0f0;
+  color: #fff;
+}
+
+#open-modal-button:hover {
+  color: #0f0;
+  background: #fff;
+}
+
+#close-modal-button {
+  color: black;
+  border: none;
+  background: none;
+  outline: none;
+  width: 2rem;
+  height: 2rem;
+  margin: -0.75rem -2rem 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#close-modal-button:hover {
+  color: #000;
+  background: none;
+  text-decoration: none;
+}

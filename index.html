@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>To-Do List App</title>
+  </head>
+  <body>
+    <div id="loading"></div>
+    <div id="form-container">
+      <div id="login-form">
+        <label class="loginLabel">Log In</label>
+        <input type="email" id="login-email" placeholder="E-Mail" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button id="login-button">Log In</button>
+        <div id="login-error"></div>
+      </div>
+
+      <div class="authButtons">
+        <button id="google-auth-button">
+          <i class="fa-brands fa-google"></i>
+        </button>
+        <button id="microsoft-auth-button">
+          <i class="fa-brands fa-microsoft"></i>
+        </button>
+      </div>
+
+      <div id="register-form">
+        <label class="registerLabel">Register</label>
+        <input type="email" id="register-email" placeholder="E-Mail" />
+        <input type="password" id="register-password" placeholder="Password" />
+        <button id="register-button">Register</button>
+        <div id="register-error"></div>
+      </div>
+    </div>
+
+    <div id="profile">
+      <div id="user-profile"></div>
+      <div class="profileButton">
+        <button id="open-modal-button">Update Profile</button>
+        <button id="logout-button">Log Out</button>
+        <button id="email-verified-button">Confirm E-Mail</button>
+      </div>
+
+      <div id="modal">
+        <div class="update-profile-modal">
+          <div class="updateProfile">
+            <div class="modalHeader">
+              <div class="updateProfileText">Update Profile</div>
+              <button id="close-modal-button">X</button>
+            </div>
+            <div class="displayName">
+              <label>Name Surname</label>
+              <input
+                type="text"
+                id="profile-display-name-input"
+                placeholder="Enter your name and surname"
+              />
+            </div>
+            <div class="photo">
+              <label>Photo</label>
+              <input
+                type="url"
+                id="profile-photo-url"
+                placeholder="Enter your photo URL"
+              />
+            </div>
+            <button id="profile-update-button">Update Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="todo">
+      <h1 class="toDoListHeader">To-Do List</h1>
+      <div class="todoInputArea">
+        <input maxlength="20" type="text" id="todo-input" />
+        <button id="add-todo-button">Add</button>
+      </div>
+      <div id="todo-email-verified-error"></div>
+      <div>
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
